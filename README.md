@@ -21,7 +21,8 @@ TeleSwap -- Это Telegram-бот, который заменяет отправ
     }
     ```
 Получить id канала можно скопировав ссылку на сообщение (**ID Канала**/**ID сообщения**)
-https://t.me/ **Respect_Voice_Rerowros_Bot**/**5**
+
+https://t.me/**Respect_Voice_Rerowros_Bot**/**5**
 
 ## Использование
 Запустите бота:
