@@ -14,6 +14,7 @@ TeleSwap -- Это Telegram-бот, который заменяет отправ
 
 ## Автоматически
 Скачать из [Release](https://github.com/Rerowros/TeleSwap/releases/tag/Main) или [CLONE.bat](https://github.com/Rerowros/TeleSwap/releases/download/Main/CLONE.bat) или [Архив](https://github.com/Rerowros/TeleSwap/releases/download/Main/TeleSwap.7z)
+если установили clone.bat — настроить config и запускать через start.bat
 Если отсутсвует Telethon, Установить.
 Или запустить **install.bat (1 раз)**, после чего запустить **Start.bat**
 
