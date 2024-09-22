@@ -1,5 +1,5 @@
 @echo off
-echo "Work"
+echo "Worka"
 
 call venv\Scripts\activate
 python TeleSwap.py
