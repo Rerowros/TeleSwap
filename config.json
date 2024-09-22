@@ -1,0 +1,17 @@
+{
+    
+    "api_id": "YOUR API ID",
+    "api_hash": "YOUR HASH ID",
+    "device_model": "TeleSwap",
+    "system_version": "14.8.1",
+    "app_version": "8.4",
+    "lang_code": "en",
+    "system_lang_code": "en-US",
+    "channel_id": "YOUR LINK TO TELEGRAM CHANNEL", 
+    "message_map": {  
+        "б1": 2,
+        "б2": 5,
+        "б3": 4
+    }
+    
+}
