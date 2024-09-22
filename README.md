@@ -5,6 +5,18 @@ TeleSwap -- Это Telegram-бот, который заменяет отправ
 > [!NOTE]
 > Канал должен быть публичным
 
+# Установка
+Установить [Python](https://www.python.org/downloads/)
+
+## Вручную
+Клонировать репозиторий \ скачать файлы
+Установить Telethon
+
+## Автоматически
+Скачать из [Release](https://github.com/Rerowros/TeleSwap/releases/tag/Main) или [CLONE.bat](https://github.com/Rerowros/TeleSwap/releases/download/Main/CLONE.bat) или [Архив](https://github.com/Rerowros/TeleSwap/releases/download/Main/TeleSwap.7z)
+Если отсутсвует Telethon, Установить.
+Или запустить **install.bat (1 раз)**, после чего запустить **Start.bat**
+
 ## Настройка
 [Получить API для Пользователя](https://my.telegram.org./auth)
 1. Отредактируйте `config.json` в соответсвии со своими требованиями
@@ -32,4 +44,3 @@ TeleSwap -- Это Telegram-бот, который заменяет отправ
 ```bash
 python TeleSwap.py
 ```
-Или Скачайте Из [Release](URL) и запустите через Start.bat
