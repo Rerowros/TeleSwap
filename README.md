@@ -40,7 +40,8 @@ TeleSwap -- Это Telegram-бот, который заменяет отправ
 > t.me/ **Respect_Voice_Rerowros_Bot** / **5**
 
 ## Использование
-Запустите бота:
+Запустите бота: 
 ```bash
 python TeleSwap.py
 ```
+Или через Start.bat
