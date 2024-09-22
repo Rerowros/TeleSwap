@@ -2,5 +2,5 @@
 echo "Work"
 
 call venv\Scripts\activate
-python bench.py
+python TeleSwap.py
 pause
