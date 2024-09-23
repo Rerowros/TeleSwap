@@ -36,7 +36,7 @@
     ```json
     "api_id": "YOUR API ID",
     "api_hash": "YOUR HASH ID",
-    "device_model": "Bot Anti Message",
+    "device_model": "TeleSwap",
     "system_version": "14.8.1",
     "app_version": "8.4",
     "lang_code": "en",
