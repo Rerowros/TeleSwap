@@ -1,6 +1,6 @@
 # TeleSwap
 ### **[English Readme](ReameEng.md)**
-
+### **[LAST RELEASE](https://github.com/Rerowros/TeleSwap/releases/tag/Main)**
 ## Описание
 **TeleSwap** — это Telegram-бот, который заменяет отправленные сообщения на сообщения из публичных Telegram-каналов. Например, вы можете настроить замену на голосовые сообщения.
 
