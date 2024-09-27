@@ -44,7 +44,7 @@
     "system_lang_code": "en-US",
     "channel_id": "YOUR LINK TO TELEGRAM CHANNEL", 
     "message_map": {  
-        "СООБЩЕНИЕ": ID MESSAGE,
+        "СООБЩЕНИЕ": ID_MESSAGE,
         "б2": 5
     }
     ```
