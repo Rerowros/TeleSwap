@@ -27,6 +27,55 @@ except json.JSONDecodeError as e:
     logger.error("Ошибка декодирования JSON в файле config.json: (Поменяйте кодировку на UTF-8) %s", e)
     exit(1)
 
+class selection:
+    while True:
+        print("Выберите действие:")
+        print("1. Запустить бота")
+        print("2. Изменение настроек")
+        print("3. Выйти")
+        choice = input("Ваш выбор: ")
+        if choice == "1":
+            break
+        elif choice == "2":
+            print("Выберите параметр для изменения:")
+            print("1. channel_id")
+            print("2. message_map")
+            print("3. api_id")
+            print("4. api_hash")
+            print("5. Выйти")
+            choice = input("Ваш выбор: ")
+            if choice == "1":
+                channel_id = input("Введите channel_id: ")
+                config["channel_id"] = channel_id
+                with open('config.json', 'w', encoding='utf-8') as config_file:
+                    json.dump(config, config_file, ensure_ascii=False, indent=4)
+            elif choice == "2":
+                message_map = input("Введите message_map формата {\"б1\": 2}: ")
+                try:
+                    config["message_map"] = json.loads(message_map)
+                    with open('config.json', 'w', encoding='utf-8') as message_map:
+                        json.dump(config, message_map, ensure_ascii=False, indent=4)    
+                except json.JSONDecodeError:
+                    print("Ошибка: Неверный формат JSON.")
+            elif choice == "3":
+                api_id = input("Введите api_id: ")
+                config["api_id"] = api_id
+                with open('config.json', 'w', encoding='utf-8') as api_id:
+                    json.dump(config, api_id, ensure_ascii=False, indent=4)    
+            elif choice == "4":
+                api_hash = input("Введите api_hash: ")
+                config["api_hash"] = api_hash
+                with open('config.json', 'w', encoding='utf-8') as api_hash:
+                    json.dump(config, api_hash, ensure_ascii=False, indent=4)    
+            elif choice == "5":
+                break
+            else:
+                break
+        elif choice == "3":
+            break
+        else:
+            break
+
 device_model, system_version, app_version, lang_code, system_lang_code, channel_id, message_map, api_id, api_hash = (
     config[key] for key in 
     ["device_model", 
