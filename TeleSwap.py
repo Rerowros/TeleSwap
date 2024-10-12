@@ -88,7 +88,7 @@ device_model, system_version, app_version, lang_code, system_lang_code, channel_
     "api_id", 
     "api_hash"]
 )
-# Объявление клиента телеграма с параметрами из конфига
+# Объявление клиента телеграмма с параметрами из конфига
 client = TelegramClient(
     'session_name',
     api_id,
