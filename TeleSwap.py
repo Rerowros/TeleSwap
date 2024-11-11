@@ -28,7 +28,7 @@ except json.JSONDecodeError as e:
     exit(1)
 
 
-device_model, system_version, app_version, lang_code, system_lang_code, channel_id, message_map, api_id, api_hash = (
+device_model, system_version, app_version, lang_code, system_lang_code, channel_id, message_map, api_id, api_hash, forward_channel_id = (
     config[key] for key in 
     ["device_model", 
     "system_version", 
@@ -38,8 +38,10 @@ device_model, system_version, app_version, lang_code, system_lang_code, channel_
     "channel_id", 
     "message_map", 
     "api_id", 
-    "api_hash"]
+    "api_hash",
+    "forward_channel_id"]
 )
+
 
 # Объявление клиента телеграмма с параметрами из конфига
 client = TelegramClient(
@@ -53,12 +55,35 @@ client = TelegramClient(
     system_lang_code=system_lang_code
 )
 
+def save_config():
+    with open('config.json', 'w', encoding='utf-8') as config_file:
+        json.dump(config, config_file, ensure_ascii=False, indent=4)
+        logger.info("Конфигурация сохранена.")
+
 class TeleSwap:
     @client.on(events.NewMessage(outgoing=True))
     async def handler(event):
         try:
             message_text = event.message.message
-            if message_text in message_map:
+            if message_text.startswith('!add '):
+                post_title = message_text[5:].strip('"')
+                reply_message = await event.get_reply_message()
+                if reply_message:
+                    # Пересылка сообщения в указанный канал
+                    forwarded_messages = await client.forward_messages(forward_channel_id, reply_message)
+                    if forwarded_messages:
+                        forwarded_message_id = forwarded_messages.id
+                        message_map[post_title] = forwarded_message_id
+                        config['message_map'] = message_map
+                        save_config()
+                        logger.info("Добавление сообщения с заголовком: %s и ID сообщения: %s", post_title, forwarded_message_id)
+                        await client.send_message(event.chat_id, f'Сообщение с заголовком "{post_title}" добавлен.')
+                        logger.info("Сообщение переслано в канал с ID: %s", forward_channel_id)
+                    else:
+                        await client.send_message(event.chat_id, 'Ошибка. хз почему.')
+                else:
+                    await client.send_message(event.chat_id, 'Ответь на сообщение которое нужно сохранить.')
+            elif message_text in message_map:
                 await client.delete_messages(event.chat_id, [event.id])
                 message_id = message_map[message_text]
                 message = await client.get_messages(channel_id, ids=message_id)

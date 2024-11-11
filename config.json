@@ -1,17 +1,20 @@
 {
-    
-    "api_id": "YOUR API ID",
-    "api_hash": "YOUR HASH ID",
+    "api_id": "23919434",
+    "api_hash": "afac0d6c633615f8d46fe1255c5d5efc",
     "device_model": "TeleSwap",
     "system_version": "14.8.1",
     "app_version": "8.4",
     "lang_code": "en",
     "system_lang_code": "en-US",
-    "channel_id": "YOUR LINK TO TELEGRAM CHANNEL", 
-    "message_map": {  
+    "channel_id": "teleSwapper",
+    "message_map": {
         "б1": 2,
         "б2": 5,
-        "б3": 4
-    }
-    
+        "б3": 4,
+        "123": 578378,
+        "1": 579342,
+        "56": 15,
+        "52": 17
+    },
+    "forward_channel_id": "teleSwapper"
 }
