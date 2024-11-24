@@ -1,6 +1,6 @@
 {
-    "api_id": "23919434",
-    "api_hash": "afac0d6c633615f8d46fe1255c5d5efc",
+    "api_id": "ADD API",
+    "api_hash": "ADD API",
     "device_model": "TeleSwap",
     "system_version": "14.8.1",
     "app_version": "8.4",
@@ -16,5 +16,5 @@
         "56": 15,
         "52": 17
     },
-    "forward_channel_id": "teleSwapper"
+    "forward_channel_id": "ID"
 }
